@@ -86,7 +86,7 @@ rem --------------------------------------
 cd %home_directory%
 
 rem --------------------------------------
-rem --- perform a terraform validate   ---
+rem --- Perform a Terraform Validate   ---
 rem --------------------------------------
-
+echo Performing a Terraform Validate..
 terraform validate
