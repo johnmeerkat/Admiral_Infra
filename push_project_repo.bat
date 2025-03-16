@@ -32,7 +32,14 @@ rem --- remote reports      ---
 rem ---------------------------
 git remote -v
 git branch -r -v
+git remote show origin
 
+git ls-remote 
+git ls-remote origin
+
+rem ---------------------------
+rem --- git tasks      ---
+rem ---------------------------
 
 git commit
 git push
