@@ -48,8 +48,16 @@ git ls-remote origin
 rem ---------------------------
 rem --- git tasks      ---
 rem ---------------------------
+echo -------------------------------
+echo Perform a Git Commit..
+echo -------------------------------
 
 git commit
+
+echo -------------------------------
+echo Perform a Git Push..
+echo -------------------------------
+
 git push
 
 rem --------------------------------------
