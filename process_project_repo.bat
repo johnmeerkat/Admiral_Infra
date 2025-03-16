@@ -70,3 +70,23 @@ rem --------------------------------------
 
 cd %home_directory%
 
+echo ----------------------------------------
+echo --- Now restore the terraform exe ------
+echo ----------------------------------------
+
+cd %working_directory%
+cd .terraform\providers\registry.terraform.io\hashicorp\aws\5.91.0\windows_amd64
+
+copy %archive_directory%\terraform-provider-aws_v5.91.0_x5.exe *.* /Y  >nul 2>nul
+
+rem --------------------------------------
+rem --- go back to home directory      ---
+rem --------------------------------------
+
+cd %home_directory%
+
+rem --------------------------------------
+rem --- perform a terraform validate   ---
+rem --------------------------------------
+
+terraform validate
