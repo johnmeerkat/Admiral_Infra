@@ -16,6 +16,7 @@
 #.terraformrc
 #terraform.rc
 
+.gitignore
 terraform_plan_out.txt
 terraform_apply_with_logs.bat
 terraform.tfstate
