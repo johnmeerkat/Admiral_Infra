@@ -1,3 +1,4 @@
+@echo off
 rem --------------
 rem --- config ---
 rem --------------
@@ -20,7 +21,20 @@ rem ---------------
 cd %working_directory%
 cd .terraform\providers\registry.terraform.io\hashicorp\aws\5.91.0\windows_amd64
 
+rem ---------------------------
+rem --- move terraform file ---
+rem ---------------------------
+
 move terraform-provider-aws_v5.91.0_x5.exe %archive_directory% 
+
+rem ---------------------------
+rem --- remote reports      ---
+rem ---------------------------
+git remote -v
+git branch -r -v
+
 
 git commit
 git push
+
+
