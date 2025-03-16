@@ -15,3 +15,7 @@
 # Ignore CLI configuration files
 #.terraformrc
 #terraform.rc
+
+terraform_plan_out.txt
+terraform_apply_with_logs.bat
+terraform.tfstate
