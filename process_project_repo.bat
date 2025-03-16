@@ -27,7 +27,7 @@ rem ---------------------------
 dir *.exe > nul 2> nul
 
 if %errorlevel% == 0 (
-move terraform-provider-aws_v5.91.0_x5.exe %archive_directory% 
+move terraform-provider-aws_v5.91.0_x5.exe %archive_directory%  >nul 2>nul
 )
 rem --------------------------------------
 rem --- go back to working directory   ---
