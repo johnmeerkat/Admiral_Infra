@@ -67,14 +67,14 @@ echo ---------------------------------------------------
 echo ---------------------------------------------------
 echo Git Reports Start
 echo ---------------------------------------------------
-git log
-git log --graph --decorate --oneline
+rem git log
+rem git log --graph --decorate --oneline
 git ls-tree stash
 git ls-tree HEAD -l
 git ls-tree -r --long HEAD .
 git ls-tree --format='%(objectname) %(path)' 
 git ls-tree -r -d --format '%(objectname)' HEAD
-git ls-files  --full-name -su
+git ls-files --full-name -su
 echo ---------------------------------------------------
 echo Git Reports End
 echo ---------------------------------------------------
@@ -88,7 +88,6 @@ cd %home_directory%
 echo ----------------------------------------
 echo --- Now restore the terraform exe ------
 echo ----------------------------------------
-
 cd %working_directory%
 cd .terraform\providers\registry.terraform.io\hashicorp\aws\5.91.0\windows_amd64
 
@@ -105,3 +104,8 @@ rem --- Perform a Terraform Validate   ---
 rem --------------------------------------
 echo Performing a Terraform Validate..
 terraform validate
+
+rem --------------------------------------
+rem --- Perform a Terraform Plan       ---
+rem --------------------------------------
+terraform plan
