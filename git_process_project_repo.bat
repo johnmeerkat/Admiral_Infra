@@ -77,7 +77,6 @@ echo ---------------------------------------------------
 rem git log
 rem git log --graph --decorate --oneline
 rem git log --pretty=format: --name-status
-@echo on
 git ls-tree stash
 echo ---
 git ls-tree HEAD -l
