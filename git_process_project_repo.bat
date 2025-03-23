@@ -48,6 +48,13 @@ git ls-remote origin
 rem ---------------------------
 rem --- git tasks      ---
 rem ---------------------------
+
+echo ---------------------------------------------------
+echo Perform a Git Stash..
+echo ---------------------------------------------------
+
+git stash
+
 echo ---------------------------------------------------
 echo Perform a Git Commit..
 echo ---------------------------------------------------
@@ -71,13 +78,19 @@ rem git log
 rem git log --graph --decorate --oneline
 rem git log --pretty=format: --name-status
 git ls-tree stash
+echo <-->
 git ls-tree HEAD -l
+echo -->
 git ls-tree -r --long HEAD .
+echo -->
 git ls-tree HEAD -r -l
+echo -->
 git ls-tree -r --format='%%(objectname)%%x09%%(path)' HEAD
+echo -->
 git ls-files --full-name -s
+echo -->
 git ls-files |tree
-
+echo <-->
 echo ---------------------------------------------------
 echo Git Reports End
 echo ---------------------------------------------------
