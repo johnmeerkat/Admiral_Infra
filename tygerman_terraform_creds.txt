@@ -1,0 +1,4 @@
+amazon_org	: 341944515031
+user		: tygerman_terraform
+password        : !9Sparrowdrive!
+bucket 		: tygermanbucket
