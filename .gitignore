@@ -21,7 +21,7 @@ terraform_plan_out.txt
 terraform_apply_with_logs.bat
 terraform.tfstate
 
-terraform_apply.config
+terraform-output.config
 terraform_plan_out.log
 terraform_plan_with_logs.bat
 tygerman_terraform_creds.txt
