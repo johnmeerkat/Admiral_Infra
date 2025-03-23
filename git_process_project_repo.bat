@@ -50,10 +50,16 @@ rem --- git tasks      ---
 rem ---------------------------
 
 echo ---------------------------------------------------
-echo Perform a Git Stash..
+echo Perform a Git Tag..
+echo ---------------------------------------------------
+rem git tag -a v8 -m "v8"
+
+git tag
+echo ---------------------------------------------------
+echo Perform a Git Stash ( stashes this file ) ..
 echo ---------------------------------------------------
 
-git stash
+rem git stash 
 
 echo ---------------------------------------------------
 echo Perform a Git Commit..
@@ -65,7 +71,7 @@ echo ---------------------------------------------------
 echo Perform a Git Push..
 echo ---------------------------------------------------
 
-git push
+git push --follow-tags
 
 echo ---------------------------------------------------
 echo End Git Tasks
