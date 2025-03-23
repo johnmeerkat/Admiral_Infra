@@ -69,11 +69,17 @@ echo Git Reports Start
 echo ---------------------------------------------------
 rem git log
 rem git log --graph --decorate --oneline
+rem git log --pretty=format: --name-status
 git ls-tree stash
 git ls-tree HEAD -l
 git ls-tree -r --long HEAD .
-git ls-tree HEAD -r --format='%(objectname) %(path)'
+git ls-tree HEAD -r -l
+rem git ls-tree HEAD -r --format='%(objectname) %(path)'
+git ls-tree -r --format='%%(objectname)%%x09%%(path)' HEAD
+@echo on
 git ls-files --full-name -s
+rem git ls-tree -r --name-only HEAD | tree --fromfile
+git ls-files  | tree --fromfile .
 echo ---------------------------------------------------
 echo Git Reports End
 echo ---------------------------------------------------
