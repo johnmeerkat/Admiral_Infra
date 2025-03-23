@@ -1,8 +1,11 @@
-resource "aws_s3_bucket" "john_test_bucket" {
-  bucket = "john_test_bucket"
+resource "aws_s3_bucket" "tygermanbucket" {
+  bucket = "tygermanbucket"
   tags = {
-    Name        = "john_test_bucket"
-    Environment = "Production"
+    Environment = "dev"
+    Name        = "tygermanbucket"
+  }
+  tags_all = {
+        "Environment" = "dev"
+        "Name"        = "tygermanbucket"
   }
 }
-
