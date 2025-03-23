@@ -85,7 +85,7 @@ git ls-tree -r --long HEAD .
 echo ---
 git ls-tree HEAD -r -l
 echo ---
-git ls-tree -r --format='%%(objectname)%%x09%%(path)' HEAD
+git ls-tree -r --format=%%(objectname)%%x09%%(path) HEAD
 echo ---
 git ls-files --full-name -s
 echo ---
