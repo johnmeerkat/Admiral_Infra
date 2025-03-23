@@ -52,7 +52,7 @@ rem ---------------------------
 echo ---------------------------------------------------
 echo Perform a Git Tag..
 echo ---------------------------------------------------
-rem git tag -a v8 -m "v8"
+git tag -a v9 -m "v9"
 
 git tag
 echo ---------------------------------------------------
@@ -107,9 +107,9 @@ rem --------------------------------------
 
 cd %home_directory%
 
-echo ----------------------------------------
-echo --- Now restore the terraform exe ------
-echo ----------------------------------------
+rem ----------------------------------------
+rem --- Now restore the terraform exe ------
+rem ----------------------------------------
 cd %working_directory%
 cd .terraform\providers\registry.terraform.io\hashicorp\aws\5.91.0\windows_amd64
 
@@ -121,13 +121,22 @@ rem --------------------------------------
 
 cd %home_directory%
 
-rem --------------------------------------
-rem --- Perform a Terraform Validate   ---
-rem --------------------------------------
+echo --------------------------------------
+echo --- Perform a Terraform Validate   ---
+echo --------------------------------------
 echo Performing a Terraform Validate..
+
 terraform validate
 
-rem --------------------------------------
-rem --- Perform a Terraform Plan       ---
-rem --------------------------------------
+echo --------------------------------------
+echo --- Perform a Terraform Plan       ---
+echo --------------------------------------
+echo Performing a Terraform Plan and output a file..
+
 terraform plan -out terraform-output.config
+
+echo --------------------------------------
+echo ---              Exit              ---
+echo --------------------------------------
+
+rem exit 0
