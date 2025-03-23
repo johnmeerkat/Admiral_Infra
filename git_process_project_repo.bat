@@ -77,20 +77,21 @@ echo ---------------------------------------------------
 rem git log
 rem git log --graph --decorate --oneline
 rem git log --pretty=format: --name-status
+@echo on
 git ls-tree stash
-echo <-->
+echo ---
 git ls-tree HEAD -l
-echo -->
+echo ---
 git ls-tree -r --long HEAD .
-echo -->
+echo ---
 git ls-tree HEAD -r -l
-echo -->
+echo ---
 git ls-tree -r --format='%%(objectname)%%x09%%(path)' HEAD
-echo -->
+echo ---
 git ls-files --full-name -s
-echo -->
+echo ---
 git ls-files |tree
-echo <-->
+echo ---
 echo ---------------------------------------------------
 echo Git Reports End
 echo ---------------------------------------------------
