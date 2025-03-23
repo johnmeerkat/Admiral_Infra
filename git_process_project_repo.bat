@@ -71,6 +71,10 @@ git log
 git log --graph --decorate --oneline
 git ls-tree stash
 git ls-tree HEAD -l
+git ls-tree -r --long HEAD .
+git ls-tree --format='%(objectname) %(path)' 
+git ls-tree -r -d --format '%(objectname)' HEAD
+git ls-files  --full-name -su
 echo ---------------------------------------------------
 echo Git Reports End
 echo ---------------------------------------------------
